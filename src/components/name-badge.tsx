@@ -1,8 +1,12 @@
 //const NameBadge = ({name}:{name: string}) => {} could also be written
-//like: const addTwo =(n: number)=> n + 2 changing it to...
+//similar to: const addTwo =(n: number)=> n + 2 changing it to...
 
-const NameBadge = (props:{name: string}) => {
-  if(Math.random()) return null;
+type NameBadgeProps = {
+  name: string,
+  greeting?: string
+}
+
+const NameBadge = (props: NameBadgeProps)=> {
   return (
     <section className="badge">
       <header className="badge-header">
